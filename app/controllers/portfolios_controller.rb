@@ -2,4 +2,23 @@ class PortfoliosController < ApplicationController
         def index 
             @portfolio_items = Portfolio.all #making this available to the view
         end
+
+        def new
+            @portfolio_item = Portfolio.new #before he added this code an red screen error would pop up however that didnt  happen for  mine. not sure if this code is super important? it wont let me create though
+        end
+
+        def create
+            @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body))
+               
+            respond_to do |format|
+                    if @portfolio_item.save
+                    format.html { redirect_to portfolios_path, notice: 'Your Portfolio item is live.' }
+                    # format.json { render :show, status: :created, location: @blog }
+                    else
+                    format.html { render :new }
+                    # format.json { render json: @blog.errors, status: :unprocessable_entity }
+                    end
+                end
+        end
+
 end
