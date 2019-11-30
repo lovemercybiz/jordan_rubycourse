@@ -3,4 +3,6 @@ class Blog < ApplicationRecord
     #Instructor rule of thumb: is that I'll use an enum if the potential options can be hard coded and the number of potential options is small (usually 1-5 options)
         extend FriendlyId
     friendly_id :title, use: :slugged
+
+    validates_presence_of :title, :body
 end
