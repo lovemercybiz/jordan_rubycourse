@@ -3,6 +3,12 @@ class PortfoliosController < ApplicationController
             @portfolio_items = Portfolio.all #making this available to the view
         end
 
+        def react
+          @react_portfolio_items = Portfolio.react
+        end
+
+        # def 
+        # end
         def new
             @portfolio_item = Portfolio.new #before he added this code an red screen error would pop up however that didnt  happen for  mine. not sure if this code is super important? it wont let me create though
         end

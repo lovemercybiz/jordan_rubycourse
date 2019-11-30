@@ -6,10 +6,18 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+3.times do |topic|
+    Topic.create!(
+        title:  "Topic #{topic}"
+    )
+end
+puts "3 topics created"
+
 10.times do |b|
         Blog.create!(
             title:  "Blog post #{b}",
-            body: "Ut tincidunt at ipsum nec semper. Fusce in risus augue. Nullam ligula dolor, hendrerit vitae tempor et, interdum at augue. Aenean felis magna, eleifend eu facilisis ut, efficitur vel leo. Etiam non turpis et sapien pellentesque egestas. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec eu malesuada leo. Phasellus tempor vel neque sit amet bibendum. Suspendisse interdum justo purus, in lacinia justo sollicitudin a. Vivamus convallis volutpat odio, quis ultrices velit vestibulum et. Proin condimentum enim laoreet facilisis rhoncus. Integer vitae congue tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque laoreet arcu non neque vulputate ornare. "
+            body: "Ut tincidunt at ipsum nec semper. Fusce in risus augue. Nullam ligula dolor, hendrerit vitae tempor et, interdum at augue. Aenean felis magna, eleifend eu facilisis ut, efficitur vel leo. Etiam non turpis et sapien pellentesque egestas. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec eu malesuada leo. Phasellus tempor vel neque sit amet bibendum. Suspendisse interdum justo purus, in lacinia justo sollicitudin a. Vivamus convallis volutpat odio, quis ultrices velit vestibulum et. Proin condimentum enim laoreet facilisis rhoncus. Integer vitae congue tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque laoreet arcu non neque vulputate ornare. ",
+            topic_id: Topic.last.id
         )
 end
 puts "10 blog posts created"
@@ -22,10 +30,20 @@ puts "10 blog posts created"
 end
 puts "5 skills created"
 
-9.times do |p|
+8.times do |p|
     Portfolio.create!(
     title: "Portfolio title #{p}",
-    subtitle: "Great service #{p}",
+    subtitle: "Ruby on Rails",
+    body: "Ut dapibus consectetur dolor vel cursus. Aliquam fermentum ex molestie turpis faucibus, eget commodo nunc aliquam. Pellentesque volutpat eros ante, a vehicula urna lobortis quis. Aliquam nec consequat nibh. In lorem tellus, auctor posuere augue non, ullamcorper auctor velit. Vivamus congue sed mauris id malesuada. Cras blandit euismod risus, ut consequat felis faucibus id. Nulla eu purus massa. Integer laoreet dui velit, quis ullamcorper erat aliquam sit amet.",
+    main_image: "https://via.placeholder.com/600x300/F39A9E.png",#"https://via.placeholder.com/300x250/fff.png",
+    thumb_image: "https://via.placeholder.com/250x300/F39A9E.png"#"https://via.placeholder.com/50x50/fff.png"
+    )
+end
+
+1.times do |p|
+    Portfolio.create!(
+    title: "Portfolio title #{p}",
+    subtitle: "React JS",
     body: "Ut dapibus consectetur dolor vel cursus. Aliquam fermentum ex molestie turpis faucibus, eget commodo nunc aliquam. Pellentesque volutpat eros ante, a vehicula urna lobortis quis. Aliquam nec consequat nibh. In lorem tellus, auctor posuere augue non, ullamcorper auctor velit. Vivamus congue sed mauris id malesuada. Cras blandit euismod risus, ut consequat felis faucibus id. Nulla eu purus massa. Integer laoreet dui velit, quis ullamcorper erat aliquam sit amet.",
     main_image: "https://via.placeholder.com/600x300/F39A9E.png",#"https://via.placeholder.com/300x250/fff.png",
     thumb_image: "https://via.placeholder.com/250x300/F39A9E.png"#"https://via.placeholder.com/50x50/fff.png"
