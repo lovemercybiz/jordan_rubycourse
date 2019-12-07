@@ -24,7 +24,7 @@ puts "10 blog posts created"
 
 5.times do |s|
         Skill.create!(
-            title: "Skill ##{s}",
+            title: "Skill # #{s}",
             percent_utilized: s + 10
         )
 end
