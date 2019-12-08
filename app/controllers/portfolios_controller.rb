@@ -3,12 +3,17 @@ class PortfoliosController < ApplicationController
             @portfolio_items = Portfolio.all #making this available to the view
         end
 
-        def new
-            @portfolio_item = Portfolio.new #before he added this code an red screen error would pop up however that didnt  happen for  mine. not sure if this code is super important? it wont let me create though
+        def react
+          @react_portfolio_items = Portfolio.react
         end
 
+        def new
+            @portfolio_item = Portfolio.new #before he added this code an red screen error would pop up however that didnt  happen for  mine. not sure if this code is super important? it wont let me create though
+          3.times { @portfolio_item.technologies.build }
+         end
+
         def create
-            @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body))
+            @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name]))
                
             respond_to do |format|
                     if @portfolio_item.save
