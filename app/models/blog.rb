@@ -6,5 +6,5 @@ class Blog < ApplicationRecord
 
     validates_presence_of :title, :body
 
-    belongs_to :topic
+    # belongs_to :topic #this prevented blogs from being created cause it required topics to be added
 end
