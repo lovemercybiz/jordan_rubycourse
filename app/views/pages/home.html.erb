@@ -1,11 +1,7 @@
 <h1>Hi, <%= current_user.first_name %>!</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 
-<h2><%= link_to 'Portfolios index', portfolios_path %></h2>
-
-
 <h1> Blog Posts</h1> 
-<h2><%= link_to 'Blogs index', blogs_path %></h2><br>
 <%= @posts.inspect %>
 
 <h1> Skills</h1>
