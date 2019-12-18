@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status] #putting methods here give them access the instance variable in this case @blg
-
+layout 'blog'
   # GET /blogs
   # GET /blogs.json
   def index
