@@ -1,11 +1,5 @@
 // Place all the styles related to the Blogs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-body {
-    background-color: rgba(166, 86, 212, .4) ; 
-}
-
-.bottom a {
-    color: rgb(23, 122, 10);
-}
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
