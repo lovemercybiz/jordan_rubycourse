@@ -5,6 +5,7 @@ layout 'blog'
   # GET /blogs.json
   def index
     @blogs = Blog.all #.limit(1) would only how 1 blog
+    @blogs = Blog.featured_blogs#.all #.limit(1) would only how 1 blog
     @page_title = "My Portfolio Blog"
   end
 
