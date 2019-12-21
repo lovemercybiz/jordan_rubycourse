@@ -1,6 +1,6 @@
 <h1>Portfolio Items</h1>
 
-<%= link_to "Create New Item", new_portfolio_url %> <%#this says path because the 'rake routes' in terminal are prefixes to '_path' or '_url'; '_path' for  relative path rather than full url%>
+<%= link_to "Create New Item", new_portfolio_url  if logged_in?(:site_admin) %> <%#this says path because the 'rake routes' in terminal are prefixes to '_path' or '_url'; '_path' for  relative path rather than full url%>
 <%# '_url' is for the full url, subdomain  options here ;  '_path' is for relative bath to the already present url%>
 
 <%= render partial: "portfolio_item", collection:  @portfolio_items %><%#  manually collections partial render; for diffrent naming conventions @portfolio_items instead of @portfolios %>
