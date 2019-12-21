@@ -16,4 +16,8 @@ module ApplicationHelper
         end
     end
 
+    def  copyright_generator
+        LoveViewTool::Renderer.copyright 'Love Mercy', 'All rights reserved'
+    end
+
 end
