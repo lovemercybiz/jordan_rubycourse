@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+@import "font-awesome";
 
 /* stylelint-disable selector-list-comma-newline-after */
 
@@ -111,3 +112,12 @@
     margin-bottom: 0;
   }
   
+  /*
+  * Custom
+  */
+
+  .list-unstyled a{
+    font-size: 4em;
+     text-align: center;
+     color: rgb(23, 23, 150);
+  }

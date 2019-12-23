@@ -3,12 +3,9 @@
             From the Blogs <small><%= link_to 'Create New Blog', new_blog_path if logged_in?(:site_admin) %></small>
             </h3>
 
+          <%= paginate @blogs %>
         <%=  render @blogs %> 
-          
-            <nav class="blog-pagination">
-                <a class="btn btn-outline-primary" href="#">Older</a>
-                <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
-            </nav>
+          <%= paginate @blogs %>
             
  </div><!-- /.blog-main -->
 
