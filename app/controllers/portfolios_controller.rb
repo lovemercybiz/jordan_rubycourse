@@ -4,7 +4,7 @@ class PortfoliosController < ApplicationController
   access all: [:show, :index, :react], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
 
         def index 
-            @portfolio_items = Portfolio.all #making this available to the view
+            @portfolio_items = Portfolio.by_position#making this available to the view
         end
 
         def react
