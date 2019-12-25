@@ -9,6 +9,11 @@ class Portfolio < ApplicationRecord
     def self.react
             where(subtitle: "React JS")
     end
+
+    def self.by_position
+            order("position ASC")
+    end
+
 #these two are equivalent but scope is better?
     scope :ruby_on_rails_portfolio_items,  -> { where(subtitle: "Ruby on Rails")}
 
