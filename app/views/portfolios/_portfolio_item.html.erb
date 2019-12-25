@@ -1,6 +1,6 @@
             <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm">
-                      <div class="card-body">
+                    <div class="card mb-4 shadow-sm" data-id="<%= portfolio_item.id%>">
+                      <div class="card-body" >
                             <%= image_tag portfolio_item.thumb_image, class:"img-fluid" unless portfolio_item.thumb_image.nil? %> <%# the if statement is better because it renders the code fully allowing for that lack of image exception. Basically : show this image unless it doesnt exisit%>
     
                         <p class="card-text">
@@ -8,13 +8,14 @@
                             <br>        <%= portfolio_item.subtitle%>
                         </p>
                         
-                        <div class="d-flex justify-content-between align-items-center">
+                        <%# <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group">
                             <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                           </div>
                           <small class="text-muted">9 mins</small>
-                        </div>
+                        </div> %>
+
                     </div>
             </div>
         </div>
