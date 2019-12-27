@@ -1,7 +1,7 @@
             <div class="col-md-4">
                     <div class="card mb-4 shadow-sm" data-id="<%= portfolio_item.id%>">
                       <div class="card-body" >
-                            <%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb') %> <%# the if statement is better because it renders the code fully allowing for that lack of image exception. Basically : show this image unless it doesnt exisit%>
+                            <%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'),  class:"img-fluid" %> <%# the if statement is better because it renders the code fully allowing for that lack of image exception. Basically : show this image unless it doesnt exisit%>
     
                         <p class="card-text">
                                     <span><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></span>
