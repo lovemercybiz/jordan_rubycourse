@@ -7,7 +7,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="keywords" content=<%= @seo_keywords%> />
-
+    <meta name="turbolinks-cache-control" content="no-cache">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -31,6 +31,15 @@
 
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="masthead mb-auto">
+     <%= video_tag(
+                'HardDrivePhotojpeg.mp4',
+                id: 'background',
+                muted: true,
+                autoplay: true,
+                loop: true,
+                poster: 'home_bg.png',
+     )%>
+
     <div class="inner">
         <%= render "shared/application_nav"%>
          </div>
