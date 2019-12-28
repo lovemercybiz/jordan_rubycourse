@@ -6,7 +6,7 @@ access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.page(params[:page]).per(5)
+    @blogs = Blog.page(params[:page]).per(5).order('created_at DESC')
     # @blogs = Blog.featured_blogs#.all #.limit(1) would only how 1 blog
     @page_title = "My Portfolio Blog"
   end
