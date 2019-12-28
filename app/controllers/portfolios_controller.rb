@@ -21,7 +21,6 @@ class PortfoliosController < ApplicationController
 
         def new
             @portfolio_item = Portfolio.new #before he added this code an red screen error would pop up however that didnt  happen for  mine. not sure if this code is super important? it wont let me create though
-          3.times { @portfolio_item.technologies.build }
          end
 
         def create
@@ -71,7 +70,7 @@ class PortfoliosController < ApplicationController
                                                                                   :body, 
                                                                                   :main_image,
                                                                                   :thumb_image,
-                                                                                  technologies_attributes: [:name]
+                                                                                  technologies_attributes: [ :id, :name, :_destroy]
                                                                                 )
         end
 
