@@ -7,8 +7,9 @@
 
                 <div class = "col-md-5">
                          <h1> <%= @portfolio_item.title %> </h1>
-                                <%= link_to 'Edit', edit_portfolio_path(@portfolio_item)  if logged_in?(:site_admin) %> 
-                         
+
+                            <%= link_to 'Edit', edit_portfolio_path(@portfolio_item), class:'col-md-12 btn btn-warning font-weight-bold text-white'  if logged_in?(:site_admin)%> 
+                                
                             <hr>
 
                          <em> <%= @portfolio_item.subtitle %> </em>
