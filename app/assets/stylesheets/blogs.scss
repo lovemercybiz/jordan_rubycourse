@@ -104,6 +104,7 @@
    * Footer
    */
   .blog-footer {
+    margin-top: 20px;
     padding: 2.5rem 0;
     color: #999;
     text-align: center;
@@ -123,3 +124,16 @@
      text-align: center;
      color: rgb(23, 23, 150);
   }
+
+  .comment-card > .card {
+    margin-top: 15px;
+  }
+
+  .comment-attr {
+    font-size: .8em;
+    font-style: italic;
+  }
+
+.comment-name {
+   font-weight: 700;
+}
